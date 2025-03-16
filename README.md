@@ -14,6 +14,7 @@ Nous avons testé plusieurs modèles pour prédire le risque de cancer du col de
 - **Arbres de Décision**
 
 Les détails de ces modèles et leur performance sont expliqués dans le rapport final.
+👉 Pour une évaluation détaillée des modèles, consultez le fichier suivant : [Évaluation des modèles](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/Comparer%20les%20mod%C3%A8les.ipynb)
 
 ### 3. Téléchargement du Dataset
 Le jeu de données utilisé dans ce projet est disponible ici : [Télécharger le dataset](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Data/sobar-72.csv).
