@@ -4,7 +4,9 @@ Ce projet vise à prédire le risque de cancer du col de l'utérus en fonction d
 
 
 ### 1. Préparation des Données
-Tous les détails concernant la préparation des données sont disponibles dans le fichier de préparation. Vous pouvez consulter ce fichier en suivant ce lien : [Lien vers la préparation des données](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/Preparation.ipynb).
+Tous les détails concernant la préparation des données sont disponibles dans le fichier de préparation. Tous les détails concernant la préparation des données sont disponibles dans le fichier de préparation. Ce fichier traite, nettoie et pré-traite les données, qui seront ensuite utilisées par tous les modèles d'apprentissage automatique dans ce projet. 
+
+Vous pouvez consulter ce fichier en suivant ce lien : [Lien vers la préparation des données](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/Preparation.ipynb).
 
 ### 2. Modèles Utilisés
 Nous avons testé plusieurs modèles pour prédire le risque de cancer du col de l'utérus :
