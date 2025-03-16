@@ -1,39 +1,82 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
 
-def plot_variance_cumul_explique(X, n_components=None):
+def pca_et_visualisation(X, y):
     """
-    Paramètres:
-    - X : ndarray (shape : n_samples, n_features), données d'entrée
-    - n_components : int (facultatif), nombre de composantes principales à conserver. 
-                     Si None, utilise toutes les composantes.
+    Cette fonction prend en entrée un ensemble d'entraînement (X) et ses étiquettes (y), 
+    effectue une normalisation des données, applique la réduction de dimension avec PCA, 
+    puis visualise les résultats dans un espace 2D et vérifie la possibilité de séparation linéaire.
 
-    Retour:
-    - Affiche un graphique de la variance cumulée expliquée.
+    Paramètres :
+    - X : Données d'entrée (ensemble d'entraînement).
+    - y : Étiquettes des données (classes).
+    
+    Retour :
+    - Aucune valeur retournée : la fonction effectue seulement la réduction de dimension, la visualisation et l'évaluation de la séparation linéaire.
     """
-    # Appliquer PCA
-    pca = PCA(n_components=n_components)
-    pca.fit(X)
+    #Normalisation des données
+    scaler = StandardScaler()
+    X_normalise = scaler.fit_transform(X)  # Normalisation des données
+    
+    #PCA
+    pca = PCA(n_components=2)  
+    X_pca = pca.fit_transform(X_normalise)  
+    
+    plt.figure(figsize=(8, 6))
 
-    #la variance expliquée cumulée
-    variance_cumulee = np.cumsum(pca.explained_variance_ratio_)
 
-    # Tracer le graphique
-    plt.figure(figsize=(8, 5))
-    plt.plot(range(1, len(variance_cumulee) + 1), variance_cumulee, marker='o', linestyle='--', color='b')
+    color_map = {0: 'red', 1: 'blue'} 
 
-    plt.xlabel("Nombre de composantes principales")
-    plt.ylabel("Variance cumulée expliquée")
-    plt.title("Variance Cumulée Expliquée en fonction du Nombre de Composantes")
-    plt.grid(True)
+    labels = ['cervix' if label == 1 else 'non cervix' for label in y]
 
-    seuils = [0.9]
-    for seuil in seuils:
-        n_composantes = np.argmax(variance_cumulee >= seuil) + 1
-        plt.axhline(y=seuil, color='r', linestyle='--', alpha=0.7)
-        plt.axvline(x=n_composantes, color='g', linestyle='--', alpha=0.7)
-        plt.scatter(n_composantes, variance_cumulee[n_composantes - 1], color='red', zorder=3)
-        plt.text(n_composantes, variance_cumulee[n_composantes - 1] - 0.05, f"{n_composantes} PCs", fontsize=10, color="red")
 
+
+    scatter_cervix = plt.scatter(X_pca[y == 1, 0], X_pca[y == 1, 1], c='orange', edgecolor='k', s=50, label='cervix')
+    scatter_non = plt.scatter(X_pca[y == 0, 0], X_pca[y == 0, 1], c='blue', edgecolor='k', s=50, label='non cervix')
+
+    plt.xlabel('Composante principale 1')
+    plt.ylabel('Composante principale 2')
+    plt.title('Visualisation 2D après réduction de dimension avec PCA')
+
+
+    plt.legend(loc='best') 
+    
+    # Entraîner un modèle SVM linéaire
+    svm_model = SVC(kernel='linear')
+    svm_model.fit(X_pca, y)
+    
+    # Tracer la frontière de décision (hyperplan)
+    # Récupérer les coefficients du modèle SVM linéaire
+    w = svm_model.coef_[0]
+    b = svm_model.intercept_[0]
+    
+    # Calculer les coordonnées de la frontière de décision
+    x_min, x_max = X_pca[:, 0].min() - 1, X_pca[:, 0].max() + 1
+    y_min, y_max = X_pca[:, 1].min() - 1, X_pca[:, 1].max() + 1
+    xx, yy = np.meshgrid(np.linspace(x_min, x_max, 100), np.linspace(y_min, y_max, 100))
+    Z = svm_model.predict(np.c_[xx.ravel(), yy.ravel()])
+    Z = Z.reshape(xx.shape)
+    
+    # Tracer la frontière de décision
+    plt.contour(xx, yy, Z, levels=[0], linewidths=2, colors='black', linestyles='--')
+    
+    # Tracer les marges (soft margin)
+    # Calculer les marges : y = wx + b, les marges sont données par (1 - w * x + b) et (-1 - w * x + b)
+    margin = 1 / np.linalg.norm(w)
+    
+    # Calculer les marges positives et négatives
+    Z_margin_pos = svm_model.decision_function(np.c_[xx.ravel(), yy.ravel()]) - margin
+    Z_margin_neg = svm_model.decision_function(np.c_[xx.ravel(), yy.ravel()]) + margin
+    
+    Z_margin_pos = Z_margin_pos.reshape(xx.shape)
+    Z_margin_neg = Z_margin_neg.reshape(xx.shape)
+    
+    # Tracer les marges
+    plt.contour(xx, yy, Z_margin_pos, levels=[0], linewidths=1, colors='black', linestyles='--')
+    plt.contour(xx, yy, Z_margin_neg, levels=[0], linewidths=1, colors='black', linestyles='--')
+    
     plt.show()
+
