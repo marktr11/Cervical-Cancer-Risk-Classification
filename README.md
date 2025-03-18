@@ -12,8 +12,8 @@ Vous pouvez consulter ce fichier en suivant ce lien : [Lien vers la préparation
 Nous avons testé plusieurs modèles pour prédire le risque de cancer du col de l'utérus :
 - **SVM** (Support Vector Machine) : [Lien vers le modèle SVM](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/SVM.ipynb)
 - **Naïve Bayes** : [Lien vers le modèle Naïve Bayes](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/NaiveBayes.ipynb)
-- **Régression Logistique**
-- **Arbres de Décision**
+- **Régression Logistique** [Lien vers le modèle Logistique](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/logistique_regression.ipynb)
+- **Arbres de Décision** [Lien vers le modèle Arbres de Décision](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/TreeDecision.ipynb)
 
 Les détails de ces modèles et leur performance sont expliqués dans le rapport final.
 
