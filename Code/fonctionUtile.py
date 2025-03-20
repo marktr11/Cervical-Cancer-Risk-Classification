@@ -25,7 +25,7 @@ def pca_et_visualisation(X, y):
     X_pca = pca.fit_transform(X_normalise)
     
     # Entraînement du SVM linéaire sur l'ensemble d'entraînement avec soft margin
-    svm_model = SVC(kernel='linear', C=1.0)  # C kiểm soát mức độ soft margin
+    svm_model = SVC(kernel='linear')  
     svm_model.fit(X_pca, y)
     
     # Prédiction et calcul de la précision sur l'ensemble d'entraînement
