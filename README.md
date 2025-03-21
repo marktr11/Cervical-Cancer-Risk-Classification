@@ -23,4 +23,4 @@ Les détails de ces modèles et leur performance sont expliqués dans le rapport
 Le jeu de données utilisé dans ce projet est disponible ici : [Télécharger le dataset](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Data/sobar-72.csv).
 
 ### 4. Rapport Final
-Vous pouvez consulter le rapport détaillant l'ensemble du processus du projet, y compris les étapes de préparation des données, l'expérimentation des modèles et les résultats obtenus, en suivant ce lien : [Lien vers le rapport](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Rapport/Cervical_Cancer_Risk_Classification.pdf).
+Vous pouvez consulter le rapport détaillant l'ensemble du processus du projet, y compris les étapes de préparation des données, l'expérimentation des modèles et les résultats obtenus, en suivant ce lien : [Lien vers le rapport](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Rapport/Cervical_Rapport.pdf)
