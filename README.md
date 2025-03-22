@@ -40,7 +40,7 @@ Le jeu de données utilisé dans ce projet est disponible ici :
 Le rapport détaillant l'ensemble du processus du projet, y compris les étapes de préparation des données, l'expérimentation des modèles et les résultats obtenus, est disponible ici :  
 **[Lien vers le rapport](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Rapport/Cervical_Rapport.pdf)**
 
-## Structure du Projet
+## 5. Structure du Projet
 ```txt
 Cervical-Cancer-Risk-Classification/
 ├── .gitattributes
