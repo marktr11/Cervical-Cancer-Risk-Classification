@@ -9,7 +9,6 @@ La préparation des données est une étape essentielle dans ce projet. Toutes l
 Vous pouvez consulter ce fichier en suivant ce lien :  
 **[Préparation des Données](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/Preparation.ipynb)**
 
-
 ## 2. Modèles Utilisés
 
 Pour prédire le risque de cancer du col de l'utérus, plusieurs modèles d'apprentissage automatique ont été testés :
@@ -42,7 +41,7 @@ Le rapport détaillant l'ensemble du processus du projet, y compris les étapes 
 **[Lien vers le rapport](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Rapport/Cervical_Rapport.pdf)**
 
 ## Structure du Projet
-
+```txt
 Cervical-Cancer-Risk-Classification/
 ├── .gitattributes
 ├── .gitignore
@@ -77,5 +76,6 @@ Cervical-Cancer-Risk-Classification/
 ├── Rapport/
 │   └── Cervical_Rapport.pdf
 └── README.md
+```
 
 
