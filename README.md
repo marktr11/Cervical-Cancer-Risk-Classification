@@ -2,8 +2,6 @@
 
 Ce projet vise à prédire le risque de cancer du col de l'utérus en fonction des comportements des patients. Plusieurs modèles d'apprentissage automatique ont été utilisés, tels que SVM, Naïve Bayes, régression logistique, et arbres de décision pour effectuer cette prédiction.
 
----
-
 ## 1. Préparation des Données
 
 La préparation des données est une étape essentielle dans ce projet. Toutes les informations nécessaires à cette étape sont disponibles dans le fichier de préparation. Ce fichier effectue le nettoyage, le traitement et la prétraitement des données, qui seront ensuite utilisées par tous les modèles d'apprentissage automatique.
@@ -11,7 +9,6 @@ La préparation des données est une étape essentielle dans ce projet. Toutes l
 Vous pouvez consulter ce fichier en suivant ce lien :  
 **[Préparation des Données](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/Preparation.ipynb)**
 
----
 
 ## 2. Modèles Utilisés
 
@@ -34,21 +31,15 @@ Les détails de ces modèles ainsi que leur performance sont expliqués dans le 
 👉 Pour une évaluation détaillée des modèles, consultez le fichier suivant :  
 **[Évaluation des Modèles](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/Comparer%20les%20mod%C3%A8les.ipynb)**
 
----
-
 ## 3. Téléchargement du Dataset
 
 Le jeu de données utilisé dans ce projet est disponible ici :  
 **[Télécharger le dataset](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Data/sobar-72.csv)**
 
----
-
 ## 4. Rapport Final
 
 Le rapport détaillant l'ensemble du processus du projet, y compris les étapes de préparation des données, l'expérimentation des modèles et les résultats obtenus, est disponible ici :  
 **[Lien vers le rapport](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Rapport/Cervical_Rapport.pdf)**
-
----
 
 ## Structure du Projet
 
