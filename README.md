@@ -23,7 +23,7 @@ Pour prédire le risque de cancer du col de l'utérus, plusieurs modèles d'appr
   [Lien vers le modèle Logistique](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/logistique_regression.ipynb)
 
 - **Arbres de Décision**  
-  [Lien vers le modèle Arbres de Décision](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/TreeDecision.ipynb)
+  [Lien vers le modèle Arbres de Décision](https://github.com/marktr11/Cervical-Cancer-Risk-Classification/blob/main/Code/ArbreDeDecision.ipynb)
 
 Les détails de ces modèles ainsi que leur performance sont expliqués dans le rapport final.
 
