@@ -43,39 +43,46 @@ Le rapport détaillant l'ensemble du processus du projet, y compris les étapes 
 ## 5. Structure du Projet
 ```txt
 Cervical-Cancer-Risk-Classification/
-├── .gitattributes
-├── .gitignore
-├── Code/
-│   ├── Comparer les modèles.ipynb
-│   ├── NaiveBayes.ipynb
-│   ├── Preparation.ipynb
-│   ├── SVM.ipynb
-│   ├── TreeDecision.ipynb
-│   ├── Variables/
-│   │   ├── roc_data_NB.pkl
-│   │   ├── roc_data_log.pkl
-│   │   ├── roc_data_svm.pkl
-│   │   ├── roc_data_tree.pkl
-│   │   └── variables.pkl
-│   ├── __pycache__/
-│   │   └── fonctionUtile.cpython-311.pyc
-│   ├── fonctionUtile.py
-│   └── logistique_regression.ipynb
-├── Data/
-│   └── sobar-72.csv
-├── Image/
-│   ├── ROC_4modeles.png
-│   ├── ROC_NB.png
-│   ├── ROC_NB_smote.png
-│   ├── ROC_SVM.png
-│   ├── ROC_SVM_SMOTE.png
-│   ├── boxplot_ca_cervix.png
-│   ├── cropped-But-SD.png
-│   ├── matrice_corrélation.png
-│   └── perform_4modeles.png
-├── Rapport/
-│   └── Cervical_Rapport.pdf
-└── README.md
+|-- .gitattributes
+|-- .gitignore
+|-- Code/
+|   |-- Comparer les modèles.ipynb
+|   |-- NaiveBayes.ipynb
+|   |-- Preparation.ipynb
+|   |-- SVM.ipynb
+|   |-- TreeDecision.ipynb
+|   |-- Variables/
+|   |   |-- roc_data_NB.pkl
+|   |   |-- roc_data_log.pkl
+|   |   |-- roc_data_svm.pkl
+|   |   |-- roc_data_tree.pkl
+|   |   |-- variables.pkl
+|   |-- __pycache__/
+|   |   |-- fonctionUtile.cpython-311.pyc
+|   |-- fonctionUtile.py
+|   |-- logistique_regression.ipynb
+|-- Data/
+|   |-- sobar-72.csv
+|-- Image/
+|   |-- ROC_4modeles.png
+|   |-- ROC_NB.png
+|   |-- ROC_NB_smote.png
+|   |-- ROC_SVM.png
+|   |-- ROC_SVM_SMOTE.png
+|   |-- ROC_dt1.png
+|   |-- ROC_dt2.png
+|   |-- ROC_dt3.png
+|   |-- ROC_log1.png
+|   |-- ROC_log2.png
+|   |-- ROC_log3.png
+|   |-- ROC_opt.png
+|   |-- boxplot_ca_cervix.png
+|   |-- cropped-But-SD.png
+|   |-- matrice_correlation.png
+|   |-- perform_4modeles.png
+|-- Rapport/
+|   |-- Cervical_Rapport.pdf
+|-- README.md
 ```
 
 
